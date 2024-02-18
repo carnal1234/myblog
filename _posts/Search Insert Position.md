@@ -3,7 +3,6 @@ title: Search Insert Position
 date: 2024-02-16
 tags:
   - Leetcode
-
 ---
 
 [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/)
