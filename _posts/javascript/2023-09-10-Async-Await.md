@@ -3,6 +3,7 @@ title: Async Await
 date: 2023-09-10
 tags:
   - Javascript
+categories: Javascript
 ---
 Async Await
 

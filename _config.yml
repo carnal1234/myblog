@@ -1,5 +1,5 @@
 # The Site Configuration
-permalink: /:title.html
+permalink: /posts/:title/
 
 # Import the theme
 theme: jekyll-theme-chirpy

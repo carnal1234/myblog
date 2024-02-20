@@ -1,3 +1,10 @@
+---
+title: IIFE
+date: 2023-10-18
+tags:
+  - Javascript
+categories: Javascript
+---
 
 #What is IIFE
 

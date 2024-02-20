@@ -3,6 +3,8 @@ title: Remove Duplicates from Sorted Array
 date: 2024-02-10
 tags:
   - Leetcode
+categories: Leetcode
+
 ---
 
 

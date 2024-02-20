@@ -1,3 +1,10 @@
+---
+title: Design Pattern
+date: 2023-10-01
+tags:
+  - Javascript
+categories: Javascript
+---
 Design Pattern
 
 

@@ -3,6 +3,7 @@ title: Group-anagrams
 date: 2024-02-03
 tags:
   - Leetcode
+categories: Leetcode
 
 ---
 

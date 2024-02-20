@@ -1,4 +1,10 @@
-
+---
+title: How to loop in JS?
+date: 2023-08-22
+tags:
+  - Javascript
+categories: Javascript
+---
 
 ```js
 const orders = [500, 30, 99, 15, 223];

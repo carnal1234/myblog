@@ -1,4 +1,10 @@
-
+---
+title: Console in JS
+date: 2023-09-17
+tags:
+  - Javascript
+categories: Javascript
+---
 
 
 How to log multiple obj??
