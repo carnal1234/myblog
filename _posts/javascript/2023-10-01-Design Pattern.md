@@ -8,11 +8,13 @@ categories: Javascript
 Design Pattern
 
 
-There are mainly three ways to create objects
+In Javascript, there are many ways to create objects. Normally there is 3 ways to do it.
 
 - Factory Pattern
 - Constructor Pattern
 - Prototype Pattern
+
+Let take a look at factory pattern. It is basically a function which return an object.
 
 ```js
 //Factory Pattern
@@ -38,7 +40,7 @@ mary.print(); //I am mary and 27 years old
 
 ```
 
-Constructor pattern
+Below is constructor pattern, which is similar to factory one except using```this```.
 
 ```js
 //Constructor Pattern
