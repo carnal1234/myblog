@@ -6,90 +6,90 @@ tags:
 categories: Javascript
 ---
 
-#What is IIFE
+## **What is IIFE**
+
+IIFE is a function that is defined and executed immediately in the same line of code. 
+
+The main purpose of an IIFE is to create new scope in your code, which can help to avoid naming conflicts and keep your code more organized.
 
 
-
-Important Link Below
-
-<a>[Essential JavaScript: Mastering Immediately-invoked Function Expressions](https://medium.com/@vvkchandra/essential-javascript-mastering-immediately-invoked-function-expressions-67791338ddc6)</a>
+One of the main benefit of IIFE is to avoid global namespace pollution. We can take a look into the following function
 
 
 Before we talk about IIFE, let us look into function in JS.
 
 
 ```js
-var msg = "Hello World";
-
-//normal function
-function traditionFunc(){
-  console.log(msg);
+var name = "Brian";
+//Function declaration
+function logger() {
+ console.log(name);           // logs Brian
+ console.log(window.name);    // logs Brian
 }
-
-//Anonymous function expressions
-let AnonymousFunc = function(){
-  console.log(msg);
+window.name = "John"
+logger(); //John
+---------------
+//Function Expression
+(function () {
+  var loc = "Brian";
+function logger() {
+ console.log(name);         // logs Brian
+ console.log(window.name);  // logs undefined
 }
-
-let NamedFunc = function func(){
-  //do something
-}
-
-traditionFunc(); //Hello World
-AnonymousFunc(); //Hello World
-
+logger(); //Brian
+}) ()
 ```
 
-In the above example, Both function produce same result and log message to console.
+In the above example, variable ```loc``` is accessible through ```window```, which is a global variable. This is not ideal because we don't want variable to be accessed by everyone.
 
-<h4>Anonymous function expressions</h4>
+One way to avoid this is using IIFE. The second example localize the variable within the scope. So you can't access from outside.
 
+Beside localizing the variable, you can open access point by returning inside IIFE. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-IIFE (Immediately Invoked Function Expression)
-
-is a way to avoid inner variable go outside
-
-
-
+Take a look into the following code
 ```js
 let api = (function(){
   let data = 1;
   
   init = function(){
     console.log("init");
-    run();
   }
   
-  run = function(){
-    console.log("running");
+  getData = function(){
+    return data;
+  }
+
+  setData = function(x){
+    data = x;
   }
   
   
-  return {init : init};
+  return {init : init, getData: getData, setData: setData};
 })()
+
+console.log(data) //error
+console.log(api) //{init: ƒ, getData: ƒ, setData: ƒ}
+
+api.data = 10; //error
 
 ```
 
-Now only init function is exposed to user.
+It is a simple api function which return getter and setter.
 
-We cannot modify the data inside IIFE.
+```data``` can only be accessed by ```getData``` and modified by ```setData``` function. 
 
-And you can choose what method to be exposed by api in return.
+In other words, inner variable is protected and can be interacted by exposing some function to outside. It is exactly what api does. 
+
+
+
+## Conclusion
+
+IIFE is a conventient way to localize your variable inside the same scope. It avoid variable from being accessed outside and is a good practice to build and organize the code. Whether you’re building small scripts or large-scale applications, understanding and using IIFE effectively can significantly improve code maintainability and reliability. That it for today. Thank you.
+
+
+For more detail, you can read the following article. 
+
+<a>[Essential JavaScript: Mastering Immediately-invoked Function Expressions](https://medium.com/@vvkchandra/essential-javascript-mastering-immediately-invoked-function-expressions-67791338ddc6)</a>
 
 
 
