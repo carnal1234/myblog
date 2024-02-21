@@ -89,7 +89,7 @@ IIFE is a conventient way to localize your variable inside the same scope. It av
 
 For more detail, you can read the following article. 
 
-<a>[Essential JavaScript: Mastering Immediately-invoked Function Expressions](https://medium.com/@vvkchandra/essential-javascript-mastering-immediately-invoked-function-expressions-67791338ddc6)</a>
+<a href = "https://medium.com/@vvkchandra/essential-javascript-mastering-immediately-invoked-function-expressions-67791338ddc6">[Essential JavaScript: Mastering Immediately-invoked Function Expressions](https://medium.com/@vvkchandra/essential-javascript-mastering-immediately-invoked-function-expressions-67791338ddc6)</a>
 
 
 
