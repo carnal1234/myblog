@@ -78,7 +78,7 @@ It is a simple api function which return getter and setter.
 
 ```data``` can only be accessed by ```getData``` and modified by ```setData``` function. 
 
-In other words, inner variable is protected and can be interacted by exposing some function to outside. It is exactly what api does. 
+In other words, inner variable is protected and can be interacted by exposing some function to outside. It is exactly what api should do. 
 
 
 
